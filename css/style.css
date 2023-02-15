@@ -413,8 +413,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: auto;
-  background: url(../img/intro-bg.jpg) top center;
-  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.7);
+  background-color: #1ba687;
+  box-shadow: inset 20000px 20000px rgb(0 0 0 / 70%);
   background-size: cover;
   overflow: hidden;
   padding: 2em 0em;

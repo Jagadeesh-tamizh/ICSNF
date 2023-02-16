@@ -11,15 +11,14 @@
   --bgColor: rgba(0, 0, 0, 0.8);
   --bgDark: rgba(0, 0, 0, 0.9);
 
-  /* --highlighter : #f82249;  */
-  /* --highlighter-focus:#f8234a; */
-  /* --highlighter-hover:#e64c68; */
-
+  /* color scheme */
   --highlighter: #1aa687;
   --highlighter-hover: #41815f;
   --highlighter-focus: #00793a;
 
   --mobile-nav: #000;
+  --bgImage: #1ba687;
+  /* --bgImage : url(../img/intro-bg.jpg); */
 }
 
 * {
@@ -64,19 +63,6 @@ h6 {
 
 .main-page {
   margin-top: 70px;
-}
-
-/* Prelaoder */
-
-#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
 }
 
 /* Back to top button */
@@ -183,9 +169,11 @@ h6 {
 }
 
 #header #logo h1>a {
-  background: linear-gradient(95.06deg, var(--highlighter) 0.71%, var(--highlighter-focus) 97.76%);
+  background: linear-gradient(95.06deg, var(--highlighter) 0.71%, var(--highlighter-hover) 97.76%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+
+
 }
 
 #header #logo h1 a {
@@ -217,11 +205,6 @@ h6 {
 .nav-menu li.sfHover>ul {
   display: block;
 }
-
-/* .nav-menu ul ul {
-  top: 0;
-  left: 100%;
-} */
 
 .nav-menu ul li {
   min-width: 180px;
@@ -413,8 +396,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: auto;
-  background-color: #1ba687;
-  box-shadow: inset 20000px 20000px rgb(0 0 0 / 70%);
+  background: var(--bgImage) top center;
+  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.7);
   background-size: cover;
   overflow: hidden;
   padding: 2em 0em;
@@ -514,14 +497,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro #logo-image,
 #logo-text {
-  transition: all 1s linear;
   visibility: visible;
 }
 
 #intro #logo-text {
-  /* opacity: 0;
-  transform: translateX(50px); */
-
   font-weight: 500;
   font-size: 30px;
   line-height: 40px;
@@ -530,22 +509,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   letter-spacing: 0.065em;
   color: #fff;
   text-align: center;
-  /* text-shadow: 0px 3.16185px 3.16185px rgba(0, 0, 0, 0.25); */
 }
 
-@media screen and (max-width:973px) {
+#intro .intro-date{
+  color: #fff;
+}
 
-  #intro #logo-image,
-  #intro #logo-text {
-    visibility: hidden;
-  }
-
-  #clg-logo {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
+#intro .autonomous{
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  bottom: -30px;
 }
 
 
@@ -645,6 +619,10 @@ h6 {
   text-align: left;
 }
 
+#attendee i{
+  color: green;
+}
+
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
@@ -738,7 +716,9 @@ h6 {
   margin-bottom: 10px;
 }
 
-/* session section*/
+/* ------------------------------------------------------------------
+#  Session Section
+------------------------------------------------------------------*/
 
 #session {
   padding: 60px 0px 50px;
@@ -788,12 +768,19 @@ h6 {
 #schedule .nav-tabs a {
   border: none;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 400;
   background: var(--bgLight);
   color: #fff;
-  padding: 10px 50px;
+  padding: 10px 20px;
   margin: 0.5em 0.5em;
+  text-align: center;
 }
+
+#schedule .nav-tabs span{
+  font-size: 18px;
+  font-weight: 600;
+}
+
 
 #schedule .nav-tabs a:hover {
   transform: scale(1.1);
@@ -869,7 +856,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# scope Section
+# Scope Section
 --------------------------------------------------------------*/
 
 #scope {
@@ -953,7 +940,9 @@ h6 {
 }
 
 
-/* call for papers */
+/*----------------------------------------------------------
+# Call for Papers 
+------------------------------------------------------------*/
 
 #call-papers .card {
   background: rgba(0, 0, 0, 0.1);
@@ -1041,7 +1030,9 @@ h6 {
 }
 
 
-/* publication */
+/*------------------------------------------------------
+# Publication 
+--------------------------------------------------------*/
 
 #publication h5 {
   color: var(--highlighter);
@@ -1066,7 +1057,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# publication faq  (updated)
+# publication faq
 --------------------------------------------------------------*/
 #pub-faq .text-secondary {
   color: #3d5d6f;
@@ -1166,9 +1157,14 @@ h4 {
 }
 
 #registration .about__paragraph li {
-  margin: 0.2em 0em;
+  margin: 0.2em 0.5em;
   font-size: 15px;
 }
+
+.fa-plus{
+  color: var(--highlighter);
+}
+
 
 /*--------------------------------------------------------------
 # Gallery Section
@@ -1223,7 +1219,7 @@ h4 {
 
 
 /*--------------------------------------------------------------
-# supporters Section
+# Supporters Section
 --------------------------------------------------------------*/
 
 #supporters {
@@ -1366,82 +1362,6 @@ h4 {
 
 #subscribe button:hover {
   background: var(--highlighter-hover);
-}
-
-/*--------------------------------------------------------------
-# Buy Tickets Section
---------------------------------------------------------------*/
-
-#buy-tickets {
-  padding: 60px 0;
-}
-
-#buy-tickets .card {
-  border: none;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 10px 20px 0 var(--bgColor);
-}
-
-#buy-tickets .card:hover {
-  box-shadow: 0 10px 35px 10px var(--bgColor);
-}
-
-#buy-tickets .card hr {
-  margin: 25px 0;
-}
-
-#buy-tickets .card .card-title {
-  margin: 10px 0;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
-#buy-tickets .card .card-price {
-  font-size: 48px;
-  margin: 0;
-}
-
-#buy-tickets .card ul li {
-  margin-bottom: 20px;
-}
-
-#buy-tickets .card .text-muted {
-  opacity: 0.7;
-}
-
-#buy-tickets .card .btn {
-  font-size: 15px;
-  border-radius: 50px;
-  padding: 10px 40px;
-  transition: all 0.2s;
-  background-color: var(--highlighter);
-  border: 0;
-  color: #fff;
-}
-
-#buy-tickets .card .btn:hover {
-  background-color: var(--highlighter-hover);
-}
-
-#buy-tickets #buy-ticket-modal input,
-#buy-tickets #buy-ticket-modal select {
-  border-radius: 0;
-}
-
-#buy-tickets #buy-ticket-modal .btn {
-  font-size: 15px;
-  border-radius: 50px;
-  padding: 10px 40px;
-  transition: all 0.2s;
-  background-color: var(--highlighter);
-  border: 0;
-  color: #fff;
-}
-
-#buy-tickets #buy-ticket-modal .btn:hover {
-  background-color: var(--highlighter-hover);
 }
 
 /*--------------------------------------------------------------
@@ -1748,6 +1668,9 @@ h4 {
   .nav-menu a {
     padding: 8px 4px;
   }
+  #intro h1{
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1781,6 +1704,9 @@ h4 {
 
   #schedule .nav-tabs a {
     padding: 8px 60px;
+  }
+  .intro-date{
+    font-size: 20px;
   }
 }
 
@@ -1819,5 +1745,20 @@ h4 {
 @media (max-width: 460px) {
   #subscribe button {
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width:973px) {
+
+  #intro #logo-image,
+  #intro #logo-text {
+    visibility: hidden;
+  }
+
+  #clg-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
   }
 }

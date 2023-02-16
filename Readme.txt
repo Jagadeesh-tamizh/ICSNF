@@ -1,6 +1,3 @@
-Thanks for downloading this theme!
-
-Theme Name: TheEvent
-Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-Author: BootstrapMade.com
-Author URL: https://bootstrapmade.com
+Website for
+INTERNATIONAL CONFERENCE ON SMART INTELLIGENT SYSTEMS, NEWER MATERIALS AND FUTURE COMMUNICATIONS\
+RMKCET, RSM Nagar, Gummidipoondi Taluk, Puduvoyal, Thiruvallur, Tamil Nadu 601206

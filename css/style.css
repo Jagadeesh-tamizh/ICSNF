@@ -12,9 +12,11 @@
   --bgDark: rgba(0, 0, 0, 0.9);
 
   /* color scheme */
+
   --highlighter: #1aa687;
   --highlighter-hover: #41815f;
   --highlighter-focus: #00793a;
+
 
   --mobile-nav: #000;
 

@@ -12,17 +12,15 @@
   --bgDark: rgba(0, 0, 0, 0.9);
 
   /* color scheme */
-    --highlighter:#42C2FF;
-  --highlighter-hover: #60d5e1;
-  --highlighter-focus: #2c6faa;
-
+  --highlighter: #3dd3b2;
+  --highlighter-hover: #50c587;
+  --highlighter-focus: #0a994f;
 
   --mobile-nav: #000;
 
-  --bgImage: linear-gradient(45deg, rgb(104, 196, 224),rgb(13, 105, 243));
-
-
-
+  /*--bgImage : url('https://cdn.wallpapersafari.com/67/19/4M827V.jpg');*/
+   --bgImage: #1ba687; 
+  /* --bgImage : url(../img/intro-bg.jpg); */
 }
 
 * {
@@ -401,7 +399,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: auto;
   background: var(--bgImage) top center;
-  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.4);
   background-size: cover;
   overflow: hidden;
   padding: 2em 0em;

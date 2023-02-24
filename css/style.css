@@ -545,7 +545,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about {
   background: url("../img/about-bg.jpg");
   background-size: cover;
-  box-shadow: inset 2000px 2000px rgba(64, 92, 92, 0.6);
+  box-shadow: inset 2000px 2000px rgba(64, 92, 92, 0);
   overflow: hidden;
   position: relative;
   color: #fff;

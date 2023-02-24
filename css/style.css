@@ -20,9 +20,6 @@
   --mobile-nav: #000;
 
   --bgImage: linear-gradient(45deg, rgb(104, 196, 224),rgb(13, 105, 243));
-
-
-
 }
 
 * {
@@ -184,6 +181,12 @@ h6 {
   color: #fff;
 }
 
+
+#header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -401,7 +404,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: auto;
   background: var(--bgImage) top center;
-  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.5);
   background-size: cover;
   overflow: hidden;
   padding: 2em 0em;
@@ -430,7 +433,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .intro__paragraph {
-  margin: 20px;
+  margin: 20px 30px;
 }
 
 #intro .logo {
@@ -443,10 +446,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro h1 {
   color: #fff;
-  font-size: 52px;
-  font-weight: 600;
+  font-size: 32px !important;
+  font-weight: 500;
   text-transform: uppercase;
-  line-height: 54px;
+  line-height: 42px;
   padding: 0em 2em;
 }
 
@@ -505,9 +508,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro #logo-text {
-  font-weight: 500;
-  font-size: 29px;
-  line-height: 40px;
+  font-weight: 600;
+  font-size: 45px !important;
+  line-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -518,13 +521,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro .intro-date{
   color: #fff;
+  font-size: 34px;
 }
 
 #intro .autonomous{
   font-size: 15px;
   color: #fff;
   position: absolute;
-  bottom: -5px;
+  bottom: -25px;
 }
 
 #intro #logo-image{
@@ -632,6 +636,25 @@ h6 {
 
 #attendee i{
   color: green;
+}
+/*--------------------------------------------------------------
+# Patrons section
+--------------------------------------------------------------*/
+#patrons .team-gallery .img-desc p:first-child {
+  font-weight:500;
+  font-size: 20px;
+}
+
+#patrons .team-gallery .img-desc p {
+      margin: 0 0 20px 0;
+}
+
+#patrons .team-gallery .img-title h3 {
+  font-weight:bolder;
+}
+
+#patrons h3{
+  font-weight: 420;
 }
 
 /*--------------------------------------------------------------
@@ -1671,6 +1694,12 @@ h4 {
   }
 }
 
+@media (min-width: 1200px){
+  #header .container {
+    max-width: 1197px;
+  }
+}
+
 @media (max-width: 1199px) {
   #header .container {
     max-width: 100%;
@@ -1684,6 +1713,9 @@ h4 {
   }
 
 }
+
+
+
 
 @media (max-width: 991px) {
   #header {

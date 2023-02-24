@@ -405,7 +405,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: auto;
   background: var(--bgImage) top center;
-  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 20000px 20000px rgba(0, 0, 0, 0);
   background-size: cover;
   overflow: hidden;
   padding: 2em 0em;
